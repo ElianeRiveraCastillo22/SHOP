@@ -1,3 +1,4 @@
+// test
 import { BrowserRouter, Navigate, Route } from "react-router-dom";
 import { RoutesWithNotFound } from "./pages/components/RoutesWithNotFound/routesWithNotFound";
 import { ModuleRoutes } from "./pages/routes";

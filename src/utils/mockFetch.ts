@@ -1,3 +1,4 @@
+// test
 export const mockFetch = <T>(
     data: T,
     status: number = 200,

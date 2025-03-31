@@ -1,3 +1,4 @@
+// no tiene test
 import { useModalContext } from "@/context/Modal/UseModalContext";
 import { useUserContext } from "@/context/user/useUserContext";
 import { loginUser } from "@/services/apiuser.service";
@@ -34,6 +35,7 @@ export const Login = () => {
     } = useForm<FormValuesLogin>({
         resolver: zodResolver(schemaLogin),
         mode: "onBlur",
+        // entiendo el proposito pero esto no se debe hacer, por otro lado para que es necesario el correo?
         defaultValues: {
             username: "emilys",
             email: "emily.johnson@x.dummyjson.com",
@@ -46,6 +48,7 @@ export const Login = () => {
         try {
             const userCredentials = await loginUser(username, password);
             setUserCredentials(userCredentials);
+            // esto puede ser un util para evitar escribirlo manualmente
             localStorage.setItem("accessToken", userCredentials.accessToken);
             localStorage.setItem(
                 "user",

@@ -1,3 +1,4 @@
+// falta test
 import { ButtonForm } from "@/pages/components/Form/ButtonForm/ButtonForm";
 import { InputForgotPassword } from "@/pages/components/Form/InputForm/InputForgotPassword";
 import { PopUpConfirm } from "@/pages/components/Form/PopUpConfirm/PopUpConfirm";
@@ -26,7 +27,7 @@ export const ForgotPassword = () => {
         resolver: zodResolver(schemaForgotPassword),
         mode: "onBlur",
         defaultValues: {
-            email: "emily.johnson@x.dummyjson.com",
+            email: "",
         },
     });
 
@@ -41,6 +42,7 @@ export const ForgotPassword = () => {
         <>
             <section className="form-section form-section--forgotPassword">
                 <figure className="form-logo--forgotPassword">
+                    {/* usemos import */}
                     <img
                         src="src/assets/logos/logo-shop-main.svg"
                         alt="Logo de la tienda"
